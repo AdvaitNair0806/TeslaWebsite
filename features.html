@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="https://github.com/bedimcode/responsive-landing-page-headphones/blob/main/assets/img/favicon.png" type="image/x-icon">
+
+        <!--=============== REMIX ICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="features.css">
+
+        <title>Tesla CyberTruck</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="" alt="">
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                       
+                        <li class="nav__item">
+                            <a href="#specs" class="nav__link">FEATURES</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#case" class="nav__link">PACK IT UP</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">LOAD IT UP</a>
+                        </li>
+                        <li class="nav__item">
+                          <a href="#products" class="nav__link">LOCK IT UP</a>
+                      </li>
+                    </ul> 
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-function-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--=============== HOME ===============-->
+            
+
+            
+<!--=============== SPECS ===============-->
+<section class="specs section grid" id="specs">
+    <h2 class="section__title section__title-gradient">FEATURES</h2>
+
+    <div class="specs__container container grid">
+        <div class="specs__content grid">
+            <div class="specs__card">
+                <i class="ri-speed-up-line specs__icon"></i>
+                <h3 class="specs__title">Speed</h3>
+                <p class="specs__subtitle">2.6 sec 0-60 mph</p>
+            </div>
+
+            <div class="specs__card">
+                <i class="ri-battery-charge-line specs__icon"></i>
+                <h3 class="specs__title">Battery</h3>
+                <p class="specs__subtitle">500+ miles range</p>
+            </div>
+
+            <div class="specs__card">
+                <i class="ri-truck-line specs__icon"></i>
+                <h3 class="specs__title">Towing Capacity</h3>
+                <p class="specs__subtitle">11,000 lbs</p>
+            </div>
+
+            <div class="specs__card">
+                <i class="ri-shield-check-line specs__icon"></i>
+                <h3 class="specs__title">Durability</h3>
+                <p class="specs__subtitle">Ultra-hard 30X Cold-Rolled Stainless Steel</p>
+            </div>
+        </div>
+
+        <div>
+            <video class="specs__video" autoplay loop muted playsinline>
+                <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/Cybertruck-Safety-Desktop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        
+    </div>
+</section>
+
+<!--=============== CSS STYLING ===============-->
+<style>
+.specs__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.specs__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.specs__card {
+    background: #111;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(176, 4, 4, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.specs__card:hover {
+    transform: translateY(-5px);
+}
+
+.specs__icon {
+    font-size: 2rem;
+    color: #ff0400;
+}
+
+.specs__title {
+    font-size: 1.25rem;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+
+.specs__subtitle {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+.specs__video {
+    width: 450px;
+    height: 450px;
+    object-fit: cover; /* Ensures proper cropping */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(210, 3, 3, 0.1);
+    display: block;
+    margin: 0 auto; /* Centers the video */
+}
+
+.specs__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+</style>
+
+            <!--=============== CASE ===============-->
+            <section class="case section grid" id="case">
+                <h2 class="section__title section__title-gradient">PACK IT UP</h2>
+
+                <div class="case__container container grid">
+                    <div>
+                        <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Cybertruck-PLL-Pack-Desktop.png" alt="" class="case__img">
+                    </div>
+
+                    <div class="case__data">
+                        <p class="case__description">With a maximum payload of 2,500 pounds and 67 cubic feet of lockable storage, Cybertruck has all the capacity you need.
+                        </p>
+                       
+                    </div>
+                </div>
+            </section>
+            <section class="case section grid" id="case">
+              <h2 class="section__title section__title-gradient">LOAD IT UP</h2>
+
+              <div class="case__container container grid">
+                  <div>
+                      <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Cybertruck-PLL-Load-Desktop.png" alt="" class="case__img">
+                  </div>
+
+                  <div class="case__data">
+                      <p class="case__description">With a maximum payload of 2,500 pounds and 67 cubic feet of lockable storage, Cybertruck has all the capacity you need.
+                      </p>
+                     
+                  </div>
+              </div>
+          </section>
+          <section class="case section grid" id="case">
+            <h2 class="section__title section__title-gradient">LOCK IT UP</h2>
+
+            <div class="case__container container grid">
+                <div>
+                    <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Cybertruck-PLL-Lock-Desktop.png" alt="" class="case__img">
+                </div>
+
+                <div class="case__data">
+                    <p class="case__description">With a maximum payload of 2,500 pounds and 67 cubic feet of lockable storage, Cybertruck has all the capacity you need.
+                    </p>
+                   
+                </div>
+            </div>
+        </section>
+            <!--=============== DISCOUNT ===============-->
+            <section class="container">
+              <div class="slider-wrapper">
+                <div class="slider">
+                  <img id="slide-1" src="data:image/jpeg;base64,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" alt="3D rendering of an imaginary orange planet in space" />
+                  <img id="slide-2" src="data:image/jpeg;base64,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" alt="3D rendering of an imaginary green planet in space" />
+                  <img id="slide-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Vlt_FGhQZTlZHApcMYOzL-AonQV3ya7Ayw&s" alt="3D rendering of an imaginary blue planet in space" />
+                </div>
+                <div class="slider-nav">
+                  <a href="#slide-1"></a>
+                  <a href="#slide-2"></a>
+                  <a href="#slide-3"></a>
+                </div>
+              </div>
+            </section>
+            
+            
+            <!--=============== PRODUCTS ===============-->
+            <section class="products section" id="products">
+               
+            </section>
+        </main>
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-s-line scrollup__icon"></i>
+        </a>
+
+        <!--=============== SCROLL REVEAL ===============-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="features.js"></script>
+    </body>
+</html>

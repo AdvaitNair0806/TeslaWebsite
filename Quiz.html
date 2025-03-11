@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: url('https://t4.ftcdn.net/jpg/09/67/83/65/360_F_967836531_0vcE7U3PM2ZKuqzB4m3Xsw0mIeht9aqf.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .question_container {
+            width: 60%;
+            padding: 20px;
+            background: rgba(61, 61, 61, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .question_container h2 {
+            margin-bottom: 20px;
+        }
+
+        .options_container {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .option_input {
+            display: flex;
+            align-items: center;
+        }
+
+        .option_input input {
+            margin-right: 10px;
+        }
+
+        .btns_container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background: #555;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="que_div" class="question_container"></div>
+    </div>
+    
+    <script>
+        const questionContainer = document.getElementById("que_div");
+        let questions = [
+            "What type of building do you live in?",
+            "Where do you park when you're home?",
+            "Is there outlet access near where you park?",
+        ];
+        let options = [
+            {a: "House", b: "Apartment", c: "Townhouse", d: "Other", right: 'a'},
+            {a: "Garage", b: "Driveway", c: "Street", d: "None", right: 'c'},
+            {a: "Yes", b: "No", right: 'b'},
+        ];
+
+        let counter = 0;
+        renderQuestion();
+
+        function renderQuestion() {
+            if (counter < questions.length) {
+                let questionHTML = `<h2>Q${counter + 1}: ${questions[counter]}</h2><div class='options_container'>`;
+                for (let key in options[counter]) {
+                    if (key !== 'right') {
+                        questionHTML += `<div class='option_input'><input type='radio' name='option' value='${key}'> ${options[counter][key]}</div>`;
+                    }
+                }
+                questionHTML += `</div><div class='btns_container'>`;
+                if (counter > 0) {
+                    questionHTML += `<button onclick='prev()' class='btn'>Previous</button>`;
+                }
+                if (counter < questions.length - 1) {
+                    questionHTML += `<button onclick='next()' class='btn'>Next</button>`;
+                } else {
+                    questionHTML += `<button onclick='finish()' class='btn'>Finish</button>`;
+                }
+                questionHTML += `</div>`;
+                questionContainer.innerHTML = questionHTML;
+            }
+        }
+
+        function next() {
+            if (counter < questions.length - 1) {
+                counter++;
+                renderQuestion();
+            }
+        }
+
+        function prev() {
+            if (counter > 0) {
+                counter--;
+                renderQuestion();
+            }
+        }
+
+        function finish() {
+            questionContainer.innerHTML = `<h2>Thank you for completing the survey!</h2>`;
+        }
+    </script>
+</body>
+</html>
